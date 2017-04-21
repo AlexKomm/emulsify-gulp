@@ -59,7 +59,7 @@ module.exports = function(gulp, config) {
    * Task for moving theme fonts to dist folder
    */
   gulp.task('fonts', function() {
-    return gulp.src(config.paths.fonts + '/**/*.{eot,svg,ttf,woff,woff2}')
+    return gulp.src(config.paths.fonts + '/**/*.{eot,svg,ttf,woff,woff2,otf}')
       .pipe(gulp.dest(config.paths.dist_fonts));
   });
 

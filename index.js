@@ -54,6 +54,14 @@ module.exports = (gulp, config) => {
   });
 
   /**
+   * Task for moving theme fonts to dist folder
+   */
+  gulp.task('fonts', function() {
+    return gulp.src(config.paths.fonts + '/**/*.{eot,svg,ttf,woff,woff2}')
+      .pipe(gulp.dest(config.paths.dist_fonts));
+  });
+
+  /**
    * Task for minifying images.
    */
   gulp.task('imagemin', () => {
@@ -141,7 +149,9 @@ module.exports = (gulp, config) => {
   /**
    * Theme task declaration
    */
-  gulp.task('build', ['compile', 'scripts', 'css']);
+<<<<< develop
+  gulp.task('build', ['compile', 'scripts', 'css']);=======
+  gulp.task('build', ['fonts', 'imagemin', 'clean', 'scripts', 'styleguide-scripts', saelop
 
   /**
    * Deploy

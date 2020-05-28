@@ -6,6 +6,7 @@
     js: `${themeDir}/components/_patterns/**/*.js`,
     dist_js: `${themeDir}/dist`,
     sass: themeDir,
+<<<<< develop
     icons: `${themeDir}/images/icons/src`,
     img: [
       `${themeDir}/images/**/*`,
@@ -15,6 +16,14 @@
     pattern_lab: `${themeDir}/pattern-lab/public`,
     theme_images: `${themeDir}/images`,
     logo: `${themeDir}/logo.png`,
+/=======
+    img: themeDir + '/images',
+    fonts: themeDir + '/fonts',
+    dist_fonts: themeDir + '/dist/fonts',
+    dist_css: themeDir + '/dist/css',
+    dist_img: themeDir + '/dist/img',
+    pattern_lab: themeDir + '/pattern-lab/public'
+/>>>>>>> develop
   };
 
   module.exports = {
@@ -118,7 +127,8 @@
       rules: [],
       standard: 'WCAG2AA',
       wait: 250,
-      actions: [],
+      actions: [KA],
     },
   };
 })();
+
